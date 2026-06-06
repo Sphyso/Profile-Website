@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sifiso Dev</title>
+  </head>
+  <body>
+
+    <!-- ── NAVBAR ── -->
+    <nav>
+        <a href="#" class="nav-logo">
+        <span class="bracket">{</span>Sifiso Dev<span class="bracket">}</span>
+        </a>
+    
+        <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+    
+        <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+        </button>
+    </nav>
+    
+    <!-- mobile dropdown -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#skills" onclick="toggleMenu()">Skills</a>
+        <a href="#projects" onclick="toggleMenu()">Projects</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+    
+    <!-- ── PLACEHOLDER SECTIONS ── -->
+    <section id="about">
+        <span class="placeholder-label">About</span>
+    </section>
+    
+    <section id="skills">
+        <span class="placeholder-label">Skills</span>
+    </section>
+    
+    <section id="projects">
+        <span class="placeholder-label">Projects</span>
+    </section>
+    
+    <section id="contact">
+        <span class="placeholder-label">Contact</span>
+    </section>
+    
+    <script>
+        function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        const btn = document.querySelector('.hamburger');
+        menu.classList.toggle('open');
+        btn.classList.toggle('open');
+        }
+    </script>
+  </body>
+</html>
