@@ -169,6 +169,62 @@ nav {
   .hamburger { display: flex; }
 }
 
+/* ── HERO ── */
+#hero {
+  min-height: calc(100vh - 64px); /* full screen minus nav height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2.5rem;
+}
+
+.hero-container {
+  display: flex;          /* puts children side by side */
+  align-items: center;    /* vertically centres them */
+  gap: 4rem;              /* space between image and text */
+  max-width: 900px;       /* stops it stretching too wide */
+  width: 100%;
+}
+
+.hero-image img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;      /* crops photo to fill the circle */
+  border-radius: 50%;     /* makes it circular */
+  border: 3px solid var(--accent);
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column; /* stacks the text elements vertically */
+  gap: 0.75rem;
+}
+
+.hero-greeting {
+  font-size: 1rem;
+  color: var(--accent);
+  font-family: 'Space Mono', monospace;
+}
+
+.hero-name {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.hero-role {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.hero-bio {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 480px;
+}
+
 /* ── PLACEHOLDER SECTIONS ── */
 section {
   min-height: 100vh;
