@@ -225,7 +225,7 @@ nav {
   max-width: 480px;
 }
 
-/* ── SKILLS (Option 1 — Ticker) ── */
+/* ── SKILLS (Option 3 — Combo) ── */
 #skills { padding: 5rem 2.5rem; }
 
 .skills-container { max-width: 900px; margin: 0 auto; }
@@ -237,7 +237,13 @@ nav {
   margin-bottom: 2rem;
 }
 
-.ticker-wrap { overflow: hidden; width: 100%; }
+/* ticker */
+.ticker-wrap { 
+  overflow: hidden; 
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+ }
 
 .ticker-row {
   display: flex;
@@ -287,19 +293,14 @@ nav {
   color: var(--text-muted);
 }
 
-
-/* ── SKILLS (Option 2 — Grid) ── */
-#skills { padding: 5rem 2.5rem; }
-
-.skills-container { max-width: 900px; margin: 0 auto; }
-
-.section-heading {
-  font-family: 'Space Mono', monospace;
-  font-size: 1.5rem;
-  color: var(--text-primary);
-  margin-bottom: 2rem;
+/* divider */
+.skills-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
 }
 
+/* grid */
 .skill-category { margin-bottom: 1.75rem; }
 
 .category-title {
