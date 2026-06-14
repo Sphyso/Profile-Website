@@ -65,9 +65,105 @@
         <span class="placeholder-label">About</span>
     </section>
     
+    <!-- Skills Section -->
     <section id="skills">
-        <span class="placeholder-label">Skills</span>
+        <div class="skills-container">
+            <h2 class="section-heading">Skills</h2>
+
+            <!-- TICKER -->
+            <div class="ticker-wrap">
+                <div class="ticker-row" id="ticker-row-1"></div>
+                <div class="ticker-row reverse" id="ticker-row-2"></div>
+            </div>
+            <div class="ticker-legend">
+                <span class="leg-item"><span class="t-dot dot-lang"></span>Languages</span>
+                <span class="leg-item"><span class="t-dot dot-frame"></span>Frameworks</span>
+                <span class="leg-item"><span class="t-dot dot-db"></span>Databases</span>
+                <span class="leg-item"><span class="t-dot dot-tools"></span>IDEs &amp; Tools</span>
+                <span class="leg-item"><span class="t-dot dot-vc"></span>Version Control</span>
+            </div>
+
+            <!-- DIVIDER -->
+            <hr class="skills-divider" />
+            <br>
+
+            <!-- GRID -->
+            <div class="skill-category">
+                <p class="category-title">Languages</p>
+                <div class="skill-grid">
+                    <span class="s-pill">Java</span>
+                    <span class="s-pill">Python</span>
+                    <span class="s-pill">C#</span>
+                    <span class="s-pill">JavaScript</span>
+                    <span class="s-pill">PHP</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <p class="category-title">Frameworks &amp; Web Tools</p>
+                <div class="skill-grid">
+                    <span class="s-pill">.NET</span>
+                    <span class="s-pill">HTML</span>
+                    <span class="s-pill">CSS</span>
+                    <span class="s-pill">WordPress</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <p class="category-title">Databases</p>
+                <div class="skill-grid">
+                    <span class="s-pill">SQL</span>
+                    <span class="s-pill">MySQL</span>
+                    <span class="s-pill">Oracle</span>
+                    <span class="s-pill">PL/SQL</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <p class="category-title">IDEs &amp; Tools</p>
+                <div class="skill-grid">
+                    <span class="s-pill">Visual Studio</span>
+                    <span class="s-pill">VS Code</span>
+                    <span class="s-pill">NetBeans</span>
+                    <span class="s-pill">PyCharm</span>
+                    <span class="s-pill">IntelliJ IDEA</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <p class="category-title">Version Control</p>
+                <div class="skill-grid">
+                    <span class="s-pill">Git</span>
+                    <span class="s-pill">GitHub</span>
+                    <span class="s-pill">GitLab</span>
+                    <span class="s-pill">Azure DevOps</span>
+                </div>
+            </div>
+
+        </div>
     </section>
+
+    <script>
+        const skills = {
+            lang:  [["Java","lang"],["Python","lang"],["C#","lang"],["JavaScript","lang"],["PHP","lang"]],
+            frame: [["HTML","frame"],["CSS","frame"],["WordPress","frame"],[".NET","frame"]],
+            db:    [["SQL","db"],["MySQL","db"],["Oracle","db"],["PL/SQL","db"]],
+            tools: [["Visual Studio","tools"],["VS Code","tools"],["NetBeans","tools"],["PyCharm","tools"],["IntelliJ IDEA","tools"]],
+            vc:    [["Git","vc"],["GitHub","vc"],["GitLab","vc"],["Azure DevOps","vc"]],
+        };
+
+        const all = Object.entries(skills).flatMap(([cat, items]) => items.map(([n]) => [n, cat]));
+
+        ['ticker-row-1','ticker-row-2'].forEach(id => {
+            const row = document.getElementById(id);
+            [...all, ...all].forEach(([name, cat]) => {
+            const pill = document.createElement('div');
+            pill.className = 't-pill';
+            pill.innerHTML = `<span class="t-dot dot-${cat}"></span>${name}`;
+            row.appendChild(pill);
+            });
+        });
+    </script>
     
     <section id="projects">
         <span class="placeholder-label">Projects</span>

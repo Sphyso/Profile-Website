@@ -225,6 +225,113 @@ nav {
   max-width: 480px;
 }
 
+/* ── SKILLS (Option 1 — Ticker) ── */
+#skills { padding: 5rem 2.5rem; }
+
+.skills-container { max-width: 900px; margin: 0 auto; }
+
+.section-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+.ticker-wrap { overflow: hidden; width: 100%; }
+
+.ticker-row {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  margin-bottom: 10px;
+  animation: tickerLeft 20s linear infinite;
+}
+
+.ticker-row.reverse { animation: tickerRight 22s linear infinite; }
+
+@keyframes tickerLeft  { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes tickerRight { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+.t-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 0.875rem;
+  white-space: nowrap;
+  color: var(--text-muted);
+  background: var(--surface);
+}
+
+.t-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.dot-lang  { background: #a78bfa; }
+.dot-frame { background: #34d399; }
+.dot-db    { background: #60a5fa; }
+.dot-tools { background: #fbbf24; }
+.dot-vc    { background: #f87171; }
+
+.ticker-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.leg-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+
+/* ── SKILLS (Option 2 — Grid) ── */
+#skills { padding: 5rem 2.5rem; }
+
+.skills-container { max-width: 900px; margin: 0 auto; }
+
+.section-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+.skill-category { margin-bottom: 1.75rem; }
+
+.category-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.skill-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.s-pill {
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  background: var(--surface);
+  cursor: default;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.s-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(167, 139, 250, 0.08);
+}
+
 /* ── PLACEHOLDER SECTIONS ── */
 section {
   min-height: 100vh;
