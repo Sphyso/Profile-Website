@@ -225,6 +225,79 @@ nav {
   max-width: 480px;
 }
 
+/* ── ABOUT ── */
+#about { padding: 5rem 2.5rem; }
+ 
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3.5rem;
+  text-align: left;
+}
+ 
+.about-text {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+ 
+.about-text .section-heading { margin-bottom: 0.5rem; }
+ 
+.about-text p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin: 0;
+}
+ 
+.about-links {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 0.25rem;
+  min-width: 160px;
+}
+ 
+.about-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+ 
+.about-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(167, 139, 250, 0.08);
+}
+ 
+.link-label { font-family: 'DM Sans', sans-serif; }
+ 
+.link-arrow {
+  font-family: 'Space Mono', monospace;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+ 
+.about-link:hover .link-arrow { color: var(--accent); }
+ 
+/* mobile: stack text above links */
+@media (max-width: 640px) {
+  .about-container { flex-direction: column; gap: 2rem; }
+  .about-links { flex-direction: row; flex-wrap: wrap; }
+  .about-link { flex: 1; min-width: 140px; justify-content: center; gap: 8px; }
+}
+
 /* ── SKILLS (Option 3 — Combo) ── */
 #skills { padding: 5rem 2.5rem; }
 
