@@ -277,6 +277,75 @@
                     </div>
                 </article>
 
+                <!-- Taleshift -->
+                <article class="project-card">
+                    <div class="project-card-top">
+                        <div class="project-header">
+                        <span class="project-tag">Hackathon → Pilot</span>
+                        <h3 class="project-title">Taleshift</h3>
+                        <p class="project-subtitle">Adaptive Literacy App for South African Learners</p>
+                        </div>
+                        <p class="project-desc">
+                        An AI-powered reading companion that listens to children read aloud
+                        and helps them to improve in real time. Taleshift started as a
+                        hackathon prototype and is now moving toward a pilot, aiming to close
+                        South Africa's early literacy gap with stories that adjust to each learner.
+                        </p>
+                        <ul class="project-highlights">
+                        <li>Records learners reading aloud and transcribes it with ASR</li>
+                        <li>Reader Analyser detects hesitation and reading struggles</li>
+                        <li>Helps with pronunciation and defines flagged words</li>
+                        <li>Stories adapt to each learner's level</li>
+                        <li>Backed by documented research and validation</li>
+                        </ul>
+                    </div>
+                    <div class="project-card-bottom">
+                        <div class="project-stack">
+                        <span class="stack-pill">Python</span>
+                        <span class="stack-pill">Whisper</span>
+                        <span class="stack-pill">torchaudio</span>
+                        <span class="stack-pill">TypeScript</span>
+                        <span class="stack-pill">FastAPI</span>
+                        <span class="stack-pill">Supabase</span>
+                        </div>
+                        <a href="#" class="project-link">View on GitHub →</a>
+                    </div>
+                </article>
+
+                <!-- Player Efficiency Tracker -->
+                <article class="project-card">
+                    <div class="project-card-top">
+                        <div class="project-header">
+                        <span class="project-tag">Data Engineering</span>
+                        <h3 class="project-title">Player Efficiency Tracker</h3>
+                        <p class="project-subtitle">Football Analytics Data Pipeline</p>
+                        </div>
+                        <p class="project-desc">
+                        An end-to-end data pipeline that ingests Euro 2024 match data and
+                        models it into a Postgres star schema. It measures player efficiency
+                        (goals and assists per 90) and disciplinary risk, using a
+                        bronze/silver/gold architecture built with dbt.
+                        </p>
+                        <ul class="project-highlights">
+                        <li>Ingests all 51 Euro 2024 matches within API rate limits</li>
+                        <li>Idempotent bronze layer: raw JSONB payloads upserted by match</li>
+                        <li>dbt-built star schema with precomputed per-90 metrics</li>
+                        <li>Pydantic validation on every join key</li>
+                        </ul>
+                    </div>
+                    <div class="project-card-bottom">
+                        <div class="project-stack">
+                        <span class="stack-pill">Python</span>
+                        <span class="stack-pill">PostgreSQL</span>
+                        <span class="stack-pill">dbt</span>
+                        <span class="stack-pill">Docker</span>
+                        <span class="stack-pill">Pydantic</span>
+                        <span class="stack-pill">Streamlit</span>
+                        </div>
+                        <a href="https://github.com/Sphyso/player_efficiency_tracker" class="project-link" target="_blank" rel="noopener">View on GitHub →</a>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
